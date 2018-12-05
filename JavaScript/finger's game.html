@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Fingers game</title>
+</head>
+
+<body>
+
+    <p> How many fingers i am holding up?? </p>
+    <p><select id='userinput'>
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+    </p>
+    <button id='checkvalue'>Check</button>
+<script type="text/javascript">
+    
+    function DoGuess(correctanswer){
+ var guess=Math.floor(Math.random()*6);
+
+if(guess==correctanswer){
+    return true
+
+} else{
+return false
+}
+    }
+
+    document.getElementById('checkvalue').onclick= function(){
+    var wordentered= document.getElementById('userinput').value;
+    var numberofguesse=1
+    var gotit=false;
+    while (gotit==false){
+
+if(DoGuess(wordentered)==true){
+    gotit= true
+    alert('Damn you guessed it right' + 'it was ' + wordentered + '. It took me '+ numberofguesse +" guesses" )
+} else{
+    numberofguesse++;}
+
+    }}
+
+</script>
+
+
+</body>
+</html>
