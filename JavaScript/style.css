@@ -1,0 +1,15 @@
+#shape {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: none;
+    position: relative;
+    
+}
+h1{
+    font-display: bold;
+}
+body, html {
+height: 100%;
+margin: 0;
+}
